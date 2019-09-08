@@ -1,0 +1,208 @@
+.overlay{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  opacity: 0.8;
+  box-sizing: content-box;
+  z-index: 999999;
+  background-color: #000;
+  background: -moz-radial-gradient(center,ellipse farthest-corner,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: -webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,rgba(0,0,0,0.4)),color-stop(100%,rgba(0,0,0,0.9)));
+  background: -webkit-radial-gradient(center,ellipse farthest-corner,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: -o-radial-gradient(center,ellipse farthest-corner,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: -ms-radial-gradient(center,ellipse farthest-corner,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  background: radial-gradient(center,ellipse farthest-corner,rgba(0,0,0,0.4) 0,rgba(0,0,0,0.9) 100%);
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000',endColorstr='#e6000000',GradientType=1)";
+  -ms-filter: "alpha(opacity=50)";
+  filter: alpha(opacity=50);
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+.helperLayer {
+  box-sizing: content-box;
+  position: absolute;
+  z-index: 9999998;
+  background-color: #FFF;
+  background-color: rgba(255,255,255,.9);
+  border: 1px solid #777;
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: 4px;
+  box-shadow: 0 2px 15px rgba(0,0,0,.4);
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+.copilot{
+  box-sizing: content-box;
+  position: absolute;
+  visibility: hidden;
+  z-index: 10000000;
+  background-color: transparent;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+.copilot-stepNumber{
+  box-sizing: content-box;
+  position: absolute;
+  visibility: visible;
+  top: -16px;
+  left: -16px;
+  z-index: 9999999999!important;
+  padding: 2px;
+  font-family: Arial,verdana,tahoma;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  background: #ff3019;
+  background: -webkit-linear-gradient(top,#ff3019 0,#cf0404 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#ff3019),color-stop(100%,#cf0404));
+  background: -moz-linear-gradient(top,#ff3019 0,#cf0404 100%);
+  background: -ms-linear-gradient(top,#ff3019 0,#cf0404 100%);
+  background: -o-linear-gradient(top,#ff3019 0,#cf0404 100%);
+  background: linear-gradient(to bottom,#ff3019 0,#cf0404 100%);
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border: 3px solid white;
+  border-radius: 50%;
+  filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3019', endColorstr='#cf0404', GradientType=0)";
+  filter: "progid:DXImageTransform.Microsoft.Shadow(direction=135, strength=2, color=ff0000)";
+  box-shadow: 0 2px 5px rgba(0,0,0,.4)
+}
+.copilot-control{
+  box-sizing: content-box;
+  position: absolute;
+  visibility: visible;
+  padding: 10px;
+  background-color: white;
+  min-width: 200px;
+  max-width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 1px 10px rgba(0,0,0,.4);
+  -webkit-transition: opacity .1s ease-out;
+  -moz-transition: opacity .1s ease-out;
+  -ms-transition: opacity .1s ease-out;
+  -o-transition: opacity .1s ease-out;
+  transition: opacity .1s ease-out;
+}
+.copilot-tooltipbuttons {
+  text-align: right;
+  white-space: nowrap;
+  .copilot-button{
+    box-sizing: content-box;
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: .3em .8em;
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #fff;
+    font: 11px/normal sans-serif;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: 0;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#f4f4f4),to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4,#ececec);
+    background-image: -o-linear-gradient(#f4f4f4,#ececec);
+    background-image: linear-gradient(#f4f4f4,#ececec);
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    -o-background-clip: padding-box;
+    -webkit-border-radius: .2em;
+    -moz-border-radius: .2em;
+    border-radius: .2em;
+    zoom: 1;
+    *display: inline;
+    margin-top: 10px;
+    &.copilot-skipbutton{
+      box-sizing: content-box;
+      margin-right: 5px;
+      color: #7a7a7a;
+    }
+    &.copilot-prevbutton{
+      -webkit-border-radius: .2em 0 0 .2em;
+      -moz-border-radius: .2em 0 0 .2em;
+      border-radius: .2em 0 0 .2em;
+      border-right: 0;
+    }
+    &.copilot-nextbutton{
+      -webkit-border-radius: 0 .2em .2em 0;
+      -moz-border-radius: 0 .2em .2em 0;
+      border-radius: 0 .2em .2em 0;
+    }
+    &.copilot-disabled, &.copilot-disabled:hover, &.copilot-disabled:focus{
+      color: #9a9a9a;
+      border-color: #d4d4d4;
+      box-shadow: none;
+      cursor: default;
+      background-color: #f4f4f4;
+      background-image: none;
+      text-decoration: none;
+    }
+  }
+}
+.copilot-bullets {
+  text-align: center;
+  ul {
+    box-sizing: content-box;
+    clear: both;
+    margin: 15px auto 0;
+    padding: 0;
+    display: inline-block;
+    li {
+      box-sizing: content-box;
+      list-style: none;
+      float: left;
+      margin: 0 2px;
+      a {
+        box-sizing: content-box;
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: #ccc;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        &.active {
+          background: #999;
+        }
+      }
+    }
+  }
+}
+.copilot-arrow{
+  border: 5px solid white;
+  content: '';
+  position: absolute;
+  display: inherit;
+  &.top{
+    top: -10px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: white;
+    border-left-color: transparent;
+  }
+}
+.copilot-item{
+  z-index: 9999999!important;
+}
+.copilot-showElement{
+  position: relative;
+}

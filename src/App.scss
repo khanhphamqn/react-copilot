@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8rem;
+  .main-title {
+    color: #0e85d0;
+  }
+  .text{
+    font-size: 1.4rem;
+  }
+  .lorem-text{
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
